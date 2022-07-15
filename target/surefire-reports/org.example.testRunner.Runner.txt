@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.example.testRunner.Runner
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 227.609 s <<< FAILURE! - in org.example.testRunner.Runner
+org.example.testRunner.Runner.runScenario["First slider clickable on homepage", "F06_HomeSliders | users will be able to open sliders in home page"](9)  Time elapsed: 11.187 s  <<< FAILURE!
+java.lang.AssertionError: First Slide URL expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D06_HomeSlider.step2(D06_HomeSlider.java:23)
+	at ✽.the product for first slider is displayed(file:///D:/QC%20Team/PICS/DemoTestAutomationE-Commerce/src/main/resources/Featuers/F06_HomeSlider.feature:6)
+
+org.example.testRunner.Runner.runScenario["Second slider clickable on homepage", "F06_HomeSliders | users will be able to open sliders in home page"](10)  Time elapsed: 10.84 s  <<< FAILURE!
+java.lang.AssertionError: The Second Slide URL expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D06_HomeSlider.step2_2(D06_HomeSlider.java:37)
+	at ✽.the product for second slider is displayed(file:///D:/QC%20Team/PICS/DemoTestAutomationE-Commerce/src/main/resources/Featuers/F06_HomeSlider.feature:11)
+
+org.example.testRunner.Runner.runScenario["user opens rss link", "F07_FollowUs | users could open followUs links"](13)  Time elapsed: 15.167 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D07_FollowUS.step02(D07_FollowUS.java:24)
+	at ✽.is opened in new tab "https://demo.nopcommerce.com/new-online-store-is-open"(file:///D:/QC%20Team/PICS/DemoTestAutomationE-Commerce/src/main/resources/Featuers/F07_FollowUs.feature:27)
+

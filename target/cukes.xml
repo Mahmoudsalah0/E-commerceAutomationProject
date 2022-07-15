@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="17" time="226.305">
+<testcase classname="F01_Register | User could register with new account" name="guest user could register with valid data successfully" time="18.57">
+<system-out><![CDATA[Given user navigate to register page........................................passed
+And user choose the gender..................................................passed
+When user enter mandatory register data.....................................passed
+Then user click on register button..........................................passed
+And user could register successfully........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user login with valid email and password" time="22.163">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user login with invalid email and password" time="13.443">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "965231478"..................passed
+Then user press on login button.............................................passed
+And user could not login to the system......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_ChangeCurrency | user can change the currency [$, €]" name="guest user can choose € currency" time="8.503">
+<system-out><![CDATA[When user select “Euro” from currency dropdown list.........................passed
+Then All Dollar sign $ change to euro sign €................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user will be able to search for products with different parameters" name="user could search using &quot;Product Name&quot;" time="11.123">
+<system-out><![CDATA[Given user click on search bar..............................................passed
+When user search for product like "Samsung".................................passed
+And user click on the search Button.........................................passed
+Then user could search successfully and go to search result.................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user will be able to search for products with different parameters" name="user search using &quot;SKU&quot;" time="8.247">
+<system-out><![CDATA[Given user click on search bar..............................................passed
+When user search for product like "M8_HTC_5L"...............................passed
+And user click on the search Button.........................................passed
+Then user could search successfully with SKU................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user will be able to search for products with different parameters" name="user search using invalid &quot;product name&quot;" time="8.269">
+<system-out><![CDATA[Given user click on search bar..............................................passed
+When user search for product like "Crocs"...................................passed
+And user click on the search Button.........................................passed
+Then user could not search..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_HoverCategories  |  user could hover on categories and select one from them" name="user could hover categories" time="12.436">
+<system-out><![CDATA[When user hover category and select subcategory.............................passed
+And user click on subcategory...............................................passed
+Then user go to relative product page.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_HomeSliders | users will be able to open sliders in home page" name="First slider clickable on homepage" time="11.171">
+<failure message="First Slide URL expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on the first slider........................................passed
+Then the product for first slider is displayed..............................failed
+
+StackTrace:
+java.lang.AssertionError: First Slide URL expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D06_HomeSlider.step2(D06_HomeSlider.java:23)
+	at ✽.the product for first slider is displayed(file:///D:/QC%20Team/PICS/DemoTestAutomationE-Commerce/src/main/resources/Featuers/F06_HomeSlider.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F06_HomeSliders | users will be able to open sliders in home page" name="Second slider clickable on homepage" time="10.835">
+<failure message="The Second Slide URL expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on the second slider.......................................passed
+Then the product for second slider is displayed.............................failed
+
+StackTrace:
+java.lang.AssertionError: The Second Slide URL expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D06_HomeSlider.step2_2(D06_HomeSlider.java:37)
+	at ✽.the product for second slider is displayed(file:///D:/QC%20Team/PICS/DemoTestAutomationE-Commerce/src/main/resources/Featuers/F06_HomeSlider.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="F07_FollowUs | users could open followUs links" name="user opens facebook link" time="15.044">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user open Facebook link................................................passed
+Then is opened in new tab "https://www.facebook.com/nopCommerce"............passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_FollowUs | users could open followUs links" name="user opens twitter link" time="15.512">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user open Twitter link.................................................passed
+Then is opened in new tab "https://twitter.com/nopCommerce".................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_FollowUs | users could open followUs links" name="user opens rss link" time="15.159">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user open RSS link.....................................................passed
+Then is opened in new tab "https://demo.nopcommerce.com/new-online-store-is-open".failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D07_FollowUS.step02(D07_FollowUS.java:24)
+	at ✽.is opened in new tab "https://demo.nopcommerce.com/new-online-store-is-open"(file:///D:/QC%20Team/PICS/DemoTestAutomationE-Commerce/src/main/resources/Featuers/F07_FollowUs.feature:27)
+]]></failure>
+</testcase>
+<testcase classname="F07_FollowUs | users could open followUs links" name="user opens youtube link" time="14.825">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user open Youtube link.................................................passed
+Then is opened in new tab "https://www.youtube.com/user/nopCommerce"........passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_WishList  |  Login user could add products to wishlist" name="success message is visible after adding item to wishlist" time="12.042">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user add item to wishlist..............................................passed
+Then wishlist notification success is visible...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_WishList  |  Login user could add products to wishlist" name="number of wishlist items in home page is increased" time="13.596">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user add item to wishlist..............................................passed
+Then wishlist notification success is visible...............................passed
+And user get the number of wishlist items after adding items................passed
+Then the number of wishlist increased.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_WishList  |  Login user could add products to wishlist" name="added items are displayed on wishlist" time="14.975">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user login with "salahmento@gmail.com" and "Aa123456"...................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user add item to wishlist..............................................passed
+Then wishlist notification success is visible...............................passed
+And user get the number of wishlist items after adding items................passed
+And user go to wishlist page................................................passed
+Then the number of items greater than zero in wishlist page.................passed
+]]></system-out>
+</testcase>
+</testsuite>
